@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Btk.CaaS", "Btk.CaaS\Btk.CaaS.csproj", "{7E8B94EA-9B58-453B-AC92-289E6870C9CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Btk.CaaS.Tests", "Btk.CaaS.Tests\Btk.CaaS.Tests.csproj", "{15C3400B-8268-4B17-8D18-6E64240D51E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Btk.CaaS.Core", "Btk.CaaS.Core\Btk.CaaS.Core.csproj", "{1B1A3AFB-BFF9-4A2F-A2ED-82D20733260F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Btk.CaaS.Core.Tests", "Btk.CaaS.Core.Tests\Btk.CaaS.Core.Tests.csproj", "{999EE95C-DA94-4534-8525-333286A90A18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E8B94EA-9B58-453B-AC92-289E6870C9CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E8B94EA-9B58-453B-AC92-289E6870C9CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E8B94EA-9B58-453B-AC92-289E6870C9CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E8B94EA-9B58-453B-AC92-289E6870C9CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15C3400B-8268-4B17-8D18-6E64240D51E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15C3400B-8268-4B17-8D18-6E64240D51E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15C3400B-8268-4B17-8D18-6E64240D51E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15C3400B-8268-4B17-8D18-6E64240D51E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B1A3AFB-BFF9-4A2F-A2ED-82D20733260F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B1A3AFB-BFF9-4A2F-A2ED-82D20733260F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B1A3AFB-BFF9-4A2F-A2ED-82D20733260F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B1A3AFB-BFF9-4A2F-A2ED-82D20733260F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999EE95C-DA94-4534-8525-333286A90A18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999EE95C-DA94-4534-8525-333286A90A18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999EE95C-DA94-4534-8525-333286A90A18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999EE95C-DA94-4534-8525-333286A90A18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
