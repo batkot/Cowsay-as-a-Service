@@ -23,10 +23,17 @@ namespace Btk.CaaS.Core
         {
             string fortune = string.Empty;
 
-            using (var client = new TcpClient(_serverHost, _port))
+            try
+            {
+                using (var client = new TcpClient(_serverHost, _port))
                 using (var stream = client.GetStream())
-                    using (var reader = new StreamReader(stream))
-                        fortune = reader.ReadToEnd();
+                using (var reader = new StreamReader(stream))
+                    fortune = reader.ReadToEnd();
+            }
+            catch(SocketException ex)
+            {
+                throw new FortuneServiceUnavailableException();
+            }
 
             return fortune;
         }

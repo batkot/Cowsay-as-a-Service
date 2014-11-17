@@ -11,10 +11,12 @@ namespace Btk.CaaS.Core.Tests
     {
         private string _host;
         private int _port;
+        private string _badHost;
 
         public TcpFortuneProviderTests()
         {
             _host = "djxmmx.net";
+            _badHost = "ihopesuchuridoesntexist";
             _port = 17;
         }
         
@@ -26,6 +28,14 @@ namespace Btk.CaaS.Core.Tests
             string fortune = fortuneProvider.GetFortune();
 
             Assert.NotNull(fortune);
+        }
+
+        [Fact]
+        public void tcp_server_should_throw_exception_when_unavailable()
+        {
+            var fortuneProvider = new TcpFortuneProvider(_badHost, _port);
+
+            Assert.Throws<FortuneServiceUnavailableException>(() => fortuneProvider.GetFortune());
         }
     }
 }
