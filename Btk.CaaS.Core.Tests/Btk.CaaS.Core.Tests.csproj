@@ -50,8 +50,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cowsay\MaxColumnsLineBreakerTests.cs" />
+    <Compile Include="Cowsay\WordWrappingLineBreakerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TcpFortuneProviderTests.cs" />
+    <Compile Include="Fortune\TcpFortuneProviderTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

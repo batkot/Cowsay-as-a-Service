@@ -11,6 +11,7 @@ namespace Btk.CaaS.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using Btk.CaaS.Core;
+    using Btk.CaaS.Core.Fortune;
 
     public static class NinjectWebCommon 
     {

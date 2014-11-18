@@ -6,7 +6,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Btk.CaaS.Core
+namespace Btk.CaaS.Core.Fortune
 {
     public class TcpFortuneProvider : IFortuneProvider
     {

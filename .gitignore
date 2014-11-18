@@ -148,3 +148,5 @@ UpgradeLog*.htm
 *.bim_*.settings
 # Microsoft Fakes
 FakesAssemblies/
+#Approval Tests
+*.received.txt

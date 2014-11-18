@@ -39,10 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cowsay\Cow.cs" />
+    <Compile Include="Cowsay\ILineBreaker.cs" />
+    <Compile Include="Cowsay\MaxColumnsLineBreaker.cs" />
+    <Compile Include="Cowsay\WordWrappingLineBreaker.cs" />
     <Compile Include="FortuneServiceUnavailableException.cs" />
     <Compile Include="IFortuneProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TcpFortuneProvider.cs" />
+    <Compile Include="Fortune\TcpFortuneProvider.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

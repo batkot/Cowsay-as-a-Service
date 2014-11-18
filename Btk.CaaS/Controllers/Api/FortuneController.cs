@@ -20,9 +20,16 @@ namespace Btk.CaaS.Controllers.Api
             _fortuneProvider = fortuneProvider;
         }
 
-        public JsonResult<string> Get()
+        public IHttpActionResult Get()
         {
-            return Json(_fortuneProvider.GetFortune());
+            try
+            {
+                return Ok(System.Web.HttpUtility.HtmlEncode(_fortuneProvider.GetFortune()));
+            }
+            catch(FortuneServiceUnavailableException ex)
+            {
+                return NotFound(); 
+            }
         }
 
     }

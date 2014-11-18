@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Btk.CaaS.Core.Fortune;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Btk.CaaS.Core.Tests
+namespace Btk.CaaS.Core.Tests.Fortune
 {
     public class TcpFortuneProviderTests
     {
