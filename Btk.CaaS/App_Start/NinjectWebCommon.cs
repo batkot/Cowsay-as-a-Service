@@ -12,6 +12,8 @@ namespace Btk.CaaS.App_Start
     using Ninject.Web.Common;
     using Btk.CaaS.Core;
     using Btk.CaaS.Core.Fortune;
+    using Btk.CaaS.Core.Cowsay;
+    using Btk.CaaS.Core.Cowsay.Avatars;
 
     public static class NinjectWebCommon 
     {
@@ -64,6 +66,9 @@ namespace Btk.CaaS.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IFortuneProvider>().To<TcpFortuneProvider>().WithConstructorArgument("djxmmx.net").WithConstructorArgument(17);
+            kernel.Bind<Cow>().ToSelf();
+            kernel.Bind<IAvatarDrawer>().To<CowAvatar>();
+            kernel.Bind<ILineBreaker>().To<WordWrappingLineBreaker>().WithConstructorArgument(50);
         }        
     }
 }
