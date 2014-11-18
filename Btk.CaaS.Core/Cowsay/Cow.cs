@@ -9,9 +9,11 @@ namespace Btk.CaaS.Core.Cowsay
     public class Cow
     {
         private ILineBreaker _lineBreaker;
-        public Cow(ILineBreaker lineBreaker)
+        private IAvatarDrawer _avatarDrawer;
+        public Cow(ILineBreaker lineBreaker, IAvatarDrawer avatarDrawer)
         {
             _lineBreaker = lineBreaker;
+            _avatarDrawer = avatarDrawer;
         }
 
         public string Say(string message)
@@ -23,6 +25,7 @@ namespace Btk.CaaS.Core.Cowsay
                 builder.AppendLine(line);
             }
 
+            builder.AppendLine(_avatarDrawer.Draw(10));
             return builder.ToString();
         }
     }

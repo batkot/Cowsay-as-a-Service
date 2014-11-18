@@ -24,7 +24,7 @@ namespace Btk.CaaS.Controllers.Api
         {
             try
             {
-                return Ok(System.Web.HttpUtility.HtmlEncode(_fortuneProvider.GetFortune()));
+                return Ok(_fortuneProvider.GetFortune());
             }
             catch(FortuneServiceUnavailableException ex)
             {

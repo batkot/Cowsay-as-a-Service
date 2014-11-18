@@ -35,6 +35,7 @@ namespace Btk.CaaS.Core.Fortune
                 throw new FortuneServiceUnavailableException();
             }
 
+            fortune = fortune.Replace("\0","");
             return fortune;
         }
     }

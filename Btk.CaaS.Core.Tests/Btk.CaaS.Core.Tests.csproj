@@ -38,6 +38,9 @@
     <Reference Include="ApprovalUtilities">
       <HintPath>..\packages\ApprovalUtilities.3.0.7\lib\net35\ApprovalUtilities.dll</HintPath>
     </Reference>
+    <Reference Include="FakeItEasy">
+      <HintPath>..\packages\FakeItEasy.1.25.0\lib\net40\FakeItEasy.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cowsay\CowTests.cs" />
     <Compile Include="Cowsay\MaxColumnsLineBreakerTests.cs" />
     <Compile Include="Cowsay\WordWrappingLineBreakerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

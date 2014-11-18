@@ -39,7 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cowsay\Avatars\CowAvatar.cs" />
     <Compile Include="Cowsay\Cow.cs" />
+    <Compile Include="Cowsay\IAvatarDrawer.cs" />
     <Compile Include="Cowsay\ILineBreaker.cs" />
     <Compile Include="Cowsay\MaxColumnsLineBreaker.cs" />
     <Compile Include="Cowsay\WordWrappingLineBreaker.cs" />

@@ -1,4 +1,6 @@
-﻿using Btk.CaaS.Core.Fortune;
+﻿using Btk.CaaS.Core.Cowsay;
+using Btk.CaaS.Core.Cowsay.Avatars;
+using Btk.CaaS.Core.Fortune;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +39,15 @@ namespace Btk.CaaS.Core.Tests.Fortune
             var fortuneProvider = new TcpFortuneProvider(_badHost, _port);
 
             Assert.Throws<FortuneServiceUnavailableException>(() => fortuneProvider.GetFortune());
+        }
+
+        [Fact]
+        public void tmp()
+        {
+            var fortuneProvider = new TcpFortuneProvider(_host, _port);
+            var cow = new Cow(new WordWrappingLineBreaker(20), new CowAvatar());
+
+            var result = cow.Say("Hello");
         }
     }
 }
