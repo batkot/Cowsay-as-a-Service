@@ -9,10 +9,33 @@
         UpdateTargetId = "Cow" } ))
 {
     @Html.Hidden("message", "Hello there, does this stuff work good?");
-    <input type="submit" value="Go Cow!"/>
+    <input class="btn btn-default" type="submit" value="Go Cow!"/>
 }
 
 <div class="cow-container">
     <pre id="Cow">
     </pre>
+</div>
+
+<div class="row">
+    <div class="col-sm-2 col-sm-offset-2">
+        <h2>API</h2>
+        <p>
+            Simple API. Just send POST with Message as it's content and you'll get cowsay computed at our cloud.
+        </p>
+    </div>
+
+    <div class="col-sm-4">
+        <h2>Coming Soon</h2>
+        <p>
+            Keep in touch to get fresh news about hot cowthink product!
+        </p>
+    </div>
+
+    <div class="col-sm-2">
+        <h2>Title 3</h2>
+        <p>
+            Hue hue hue hue hue
+        </p>
+    </div>
 </div>
