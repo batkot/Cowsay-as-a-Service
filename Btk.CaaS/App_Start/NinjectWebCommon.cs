@@ -68,7 +68,7 @@ namespace Btk.CaaS.App_Start
             kernel.Bind<IFortuneProvider>().To<TcpFortuneProvider>().WithConstructorArgument("djxmmx.net").WithConstructorArgument(17);
             kernel.Bind<Cow>().ToSelf();
             kernel.Bind<IAvatarDrawer>().To<CowAvatar>();
-            kernel.Bind<ILineBreaker>().To<WordWrappingLineBreaker>().WithConstructorArgument(50);
+            kernel.Bind<ILineBreaker>().To<WordWrappingLineBreaker>().WithConstructorArgument(70);
         }        
     }
 }

@@ -38,6 +38,9 @@ namespace Btk.CaaS.Core.Cowsay
 
                 builder.Append(word);
                 charsLeftInRow -= word.Length;
+
+                if (word.EndsWith("\r\n"))
+                    charsLeftInRow = _charsPerRow;
             }
 
             if (builder.Length > 0)

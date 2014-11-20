@@ -24,7 +24,8 @@ namespace Btk.CaaS.Controllers.Api
         {
             try
             {
-                return Ok(_fortuneProvider.GetFortune());
+                var result = _fortuneProvider.GetFortune().Replace("\r\n", "<br>");
+                return Ok(result);
             }
             catch(FortuneServiceUnavailableException ex)
             {

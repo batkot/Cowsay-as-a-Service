@@ -25,7 +25,7 @@ namespace Btk.CaaS.Core.Cowsay
                 builder.AppendLine(line);
             }
 
-            builder.AppendLine(_avatarDrawer.Draw(10));
+            builder.AppendLine(_avatarDrawer.Draw(70));
             return builder.ToString();
         }
     }

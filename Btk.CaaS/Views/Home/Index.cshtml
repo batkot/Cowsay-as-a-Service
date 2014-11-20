@@ -2,4 +2,17 @@
     ViewBag.Title = "Home Page";
 }
 
-Cowsay as a Service
+@using(Ajax.BeginForm("","api/cowsay", 
+    new AjaxOptions { 
+        HttpMethod = "Post",
+        InsertionMode = System.Web.Mvc.Ajax.InsertionMode.Replace,
+        UpdateTargetId = "Cow" } ))
+{
+    @Html.Hidden("message", "Hello there, does this stuff work good?");
+    <input type="submit" value="Go Cow!"/>
+}
+
+<div class="cow-container">
+    <pre id="Cow">
+    </pre>
+</div>
