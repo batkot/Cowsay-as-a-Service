@@ -18,7 +18,12 @@ function countdown()
 
 function showTime()
 {
-    $("#countdown-seconds").html(ts.seconds());
-    $("#countdown-minutes").html(ts.minutes());
-    $("#countdown-hours").html(ts.hours() + ts.days()*24);
+    $("#countdown-seconds").html(pad(ts.seconds()));
+    $("#countdown-minutes").html(pad(ts.minutes()));
+    $("#countdown-hours").html(pad(ts.hours() + ts.days()*24));
+}
+
+function pad(number)
+{
+    return ("0" + number).slice(-2);
 }
