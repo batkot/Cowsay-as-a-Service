@@ -2,7 +2,7 @@
     margin:0px;
     padding-top: 60px;
     padding-bottom: 0px;
-    background-color: #FAFAFA;
+    background-color: #F5F5F5;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -52,6 +52,10 @@ div.cow-container
 
 .top
 {
+    -webkit-transition: 0.5s linear;
+    -o-transition: 0.5s linear;
+    -moz-transition: 0.5s linear;
+    transition: 0.5s linear;
     height: 60px;
     position: fixed;
     top: 0px;
@@ -71,6 +75,7 @@ div.top p
     margin:0;
     transform: translate(0,25%);
 }
+
 .logo
 {
     position:absolute;
@@ -82,6 +87,16 @@ div.top p
     padding: 0px;
     text-align: right;
     font-size: 0.8em;
+    -webkit-transition: 0.5s linear;
+    -o-transition: 0.5s linear;
+    -moz-transition: 0.5s linear;
+    transition: 0.5s linear;
+}
+
+.infobox
+{
+    background-color: #FFF;
+    border-color: #111;
 }
 
 @media (max-width: 600px)
@@ -93,9 +108,18 @@ div.top p
 
     .top
     {
-        transition: 1s linear ease-in-out;
+        -webkit-transition: 0.5s linear;
+        -o-transition: 0.5s linear;
+        -moz-transition: 0.5s linear;
+        transition: 0.5s linear;
         height: 30px;
-        font-size: 0.8em;
+        font-size: 1.2em;
+    }
+
+    div.top p
+    {
+        margin:0;
+        transform: translate(0,0);
     }
 
     .logo
@@ -105,6 +129,10 @@ div.top p
         -moz-transform: translate(25%, -25%) scale(0.5);
         -ms-transform: translate(25%, -25%) scale(0.5);
         transform: translate(25%, -25%) scale(0.5);
+        -webkit-transition: 0.5s linear;
+        -o-transition: 0.5s linear;
+        -moz-transition: 0.5s linear;
+        transition: 0.5s linear;
     }
 
     .foot

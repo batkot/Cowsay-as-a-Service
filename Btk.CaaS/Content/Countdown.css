@@ -1,0 +1,51 @@
+﻿.countdown-container
+{
+    margin: 0 auto;
+    max-width: 400px;
+    text-align: center;
+    font-family: LatexCapitals;
+}
+
+.countdown-header
+{
+    display:block;
+    font-size: 2em;
+    text-align: left;
+}
+
+.countdown-footer
+{
+    display: block;
+    font-size: 2em;
+    text-align: right;
+}
+
+.countdown-box
+{
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+}
+
+.countdown-number
+{
+    font-size: 5em;
+}
+
+.countdown-separator
+{
+    display: inline-block;
+    width: auto;
+    vertical-align: top;
+}
+
+.countdown-label
+{
+
+}
+
+@font-face
+{
+    font-family: LatexCapitals;
+    src:url(../fonts/lmromancaps10-regular.otf);
+}

@@ -65,7 +65,7 @@ namespace Btk.CaaS.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IFortuneProvider>().To<TcpFortuneProvider>().WithConstructorArgument("djxmmx.net").WithConstructorArgument(17);
+            kernel.Bind<IFortuneProvider>().To<TcpFortuneProvider>().WithConstructorArgument("alpha.mike-r.com").WithConstructorArgument(17);
             kernel.Bind<Cow>().ToSelf();
             kernel.Bind<IAvatarDrawer>().To<CowAvatar>();
             kernel.Bind<ILineBreaker>().To<WordWrappingLineBreaker>().WithConstructorArgument(70);

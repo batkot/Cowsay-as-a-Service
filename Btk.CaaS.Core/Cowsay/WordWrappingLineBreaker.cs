@@ -22,7 +22,7 @@ namespace Btk.CaaS.Core.Cowsay
             var builder = new StringBuilder();
             int charsLeftInRow = _charsPerRow;
 
-            foreach(var word in message.Split(new [] { ' ' }, StringSplitOptions.RemoveEmptyEntries))
+            foreach(var word in message.Split(new [] { ' ', '\n' }, StringSplitOptions.RemoveEmptyEntries))
             {
                 if (charsLeftInRow <= word.Length && charsLeftInRow != _charsPerRow)
                 {
@@ -39,7 +39,7 @@ namespace Btk.CaaS.Core.Cowsay
                 builder.Append(word);
                 charsLeftInRow -= word.Length;
 
-                if (word.EndsWith("\r\n"))
+                if (word.EndsWith("\r"))
                     charsLeftInRow = _charsPerRow;
             }
 

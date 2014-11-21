@@ -1,0 +1,54 @@
+﻿@model Btk.CaaS.Models.CountdownModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/countdown")
+}
+
+
+<div id="test"></div>
+<div id="countdown" class="countdown-container" data-countdown-remaining="@Model.RemainingSeconds">
+    <div class="countdown-header">
+        Just
+    </div>
+    <div class="countdown-box">
+        <div id="countdown-hours" class="countdown-number">
+        </div>
+        <div class="countdown-label">
+            HOURS
+        </div>
+    </div>
+    <div class="countdown-separator">
+        <div class="countdown-number">
+            :
+        </div>
+    </div>
+    <div class="countdown-box">
+        <div id="countdown-minutes" class="countdown-number">
+        </div>
+        <div class="countdown-label">
+            MINUTES
+        </div>
+    </div>
+    <div class="countdown-separator">
+        <div class="countdown-number">
+            :
+        </div>
+    </div>
+    <div class="countdown-box">
+        <div id="countdown-seconds" class="countdown-number">
+        </div>
+        <div class="countdown-label">
+            SECONDS
+        </div>
+    </div>
+    <div class="countdown-footer">
+        to release...
+    </div>
+</div>
+
+
