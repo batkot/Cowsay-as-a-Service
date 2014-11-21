@@ -3,7 +3,7 @@
 
     var timer;
 
-    ts = TimeSpan.FromSeconds(countdownElement.data("countdown-remaining"));
+    var ts = TimeSpan.FromSeconds(countdownElement.data("countdown-remaining"));
 
     $(document).ready(
         function () {
