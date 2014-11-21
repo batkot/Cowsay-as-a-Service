@@ -30,6 +30,7 @@
 .countdown-number
 {
     font-size: 5em;
+    height: auto;
 }
 
 .countdown-separator

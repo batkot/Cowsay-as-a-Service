@@ -8,6 +8,5 @@ namespace Btk.CaaS.Models
     public class CountdownModel
     {
         public int RemainingSeconds { get; set; }
-        public string EnabledLink { get; set; }
     }
 }

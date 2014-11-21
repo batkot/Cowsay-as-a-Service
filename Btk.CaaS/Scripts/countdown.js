@@ -1,29 +1,42 @@
-﻿var seconds = $("#countdown").data("countdown-remaining");
+﻿function counter(onFinishCallback) {
+    var countdownElement = $(".countdown-container");
 
-ts = TimeSpan.FromSeconds(seconds);
+    var timer;
 
-$(document).ready(
-    function () {
-        showTime();
-        setInterval(
-            function () { countdown() },
-            1000);
-    });
+    ts = TimeSpan.FromSeconds(countdownElement.data("countdown-remaining"));
 
-function countdown()
-{
-    ts.subtractSeconds(1);
-    showTime();
-}
+    $(document).ready(
+        function () {
+            updateTime();
+            timer = setInterval(
+                        function () { countdown() },
+                        1000);
+        });
 
-function showTime()
-{
-    $("#countdown-seconds").html(pad(ts.seconds()));
-    $("#countdown-minutes").html(pad(ts.minutes()));
-    $("#countdown-hours").html(pad(ts.hours() + ts.days()*24));
-}
+    function countdown() {
+        if (ts.equals(TimeSpan.FromSeconds(0))) {
+            finishCountdown();
+            return;
+        }
 
-function pad(number)
-{
-    return ("0" + number).slice(-2);
+        ts.subtractSeconds(1);
+        updateTime();
+    }
+
+    function updateTime() {
+        $("#countdown-seconds").html(format(ts.seconds()));
+        $("#countdown-minutes").html(format(ts.minutes()));
+        $("#countdown-hours").html(format(ts.hours() + ts.days() * 24));
+    }
+
+    function format(number) {
+        return ("0" + number).slice(-2);
+    }
+
+    function finishCountdown() {
+        clearInterval(timer);
+
+        if (onFinishCallback)
+            onFinishCallback();
+    }
 }

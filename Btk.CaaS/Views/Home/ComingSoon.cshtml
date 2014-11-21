@@ -2,11 +2,23 @@
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Coming Soon";
 }
 
 @section scripts
 {
     @Scripts.Render("~/bundles/countdown")
+    <script type="text/javascript">
+        counter(function()
+        {
+            $(".countdown-number").fadeTo(500, 0.1).fadeTo(500, 1.0).fadeTo(500, 0.1).fadeTo(500, 1.0, function ()
+            {
+                $(".countdown-header").html("already")
+                $(".countdown-footer").html("released");
+                $("#serviceLink").removeClass("hidden");
+            });
+        })
+    </script>
 }
 
 
@@ -51,4 +63,6 @@
     </div>
 </div>
 
-
+<div id="serviceLink" class="col-md-offset-7 col-md-5 hidden">
+    @Html.ActionLink("Go to Service...", "Index", null, new { @class = "btn btn-default" })
+</div>
