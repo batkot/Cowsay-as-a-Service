@@ -11,23 +11,19 @@ namespace Btk.CaaS.Controllers
 {
     public class HomeController : Controller
     {
-        private DateTime _releaseDate = new DateTime(2014, 11, 22, 23, 0, 0);
         private Cow _cow;
         private IFortuneProvider _fortuneProvider;
-        public HomeController(Cow cow, IFortuneProvider fortuneProvider, DateTime? releaseDate = null)
+        private IReleaseService _releaseDateService;
+        public HomeController(Cow cow, IFortuneProvider fortuneProvider, IReleaseService releaseDateService)
         {
             _cow = cow;
             _fortuneProvider = fortuneProvider;
-
-            if (releaseDate.HasValue)
-            {
-                _releaseDate = releaseDate.Value;
-            }
+            _releaseDateService = releaseDateService;
         }
 
         public ActionResult Index()
         {
-            if(DateTime.UtcNow < _releaseDate)
+            if(DateTime.UtcNow < _releaseDateService.GetReleaseDate())
                 return RedirectToAction("ComingSoon");
 
             string message = string.Empty;
@@ -47,7 +43,8 @@ namespace Btk.CaaS.Controllers
 
         public ActionResult ComingSoon()
         {
-            TimeSpan remaining = _releaseDate - DateTime.UtcNow;
+            
+            TimeSpan remaining = _releaseDateService.GetReleaseDate() - DateTime.UtcNow;
             return View(new CountdownModel { RemainingSeconds = Math.Max((int)remaining.TotalSeconds, 0) });
         }
 

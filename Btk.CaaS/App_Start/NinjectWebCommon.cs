@@ -14,6 +14,7 @@ namespace Btk.CaaS.App_Start
     using Btk.CaaS.Core.Fortune;
     using Btk.CaaS.Core.Cowsay;
     using Btk.CaaS.Core.Cowsay.Avatars;
+    using Btk.CaaS.Controllers;
 
     public static class NinjectWebCommon 
     {
@@ -69,6 +70,7 @@ namespace Btk.CaaS.App_Start
             kernel.Bind<Cow>().ToSelf();
             kernel.Bind<IAvatarDrawer>().To<CowAvatar>();
             kernel.Bind<ILineBreaker>().To<WordWrappingLineBreaker>().WithConstructorArgument(70);
+            kernel.Bind<IReleaseService>().To<ReleaseService>().WithConstructorArgument(new DateTime(2014,11,22,23,0,0));
         }        
     }
 }

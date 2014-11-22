@@ -18,11 +18,13 @@ namespace Btk.CaaS.Tests.Controllers
         {
             var cow = A.Fake<Cow>();
             var fortune = A.Fake<IFortuneProvider>();
+            var releaseDate = A.Fake<IReleaseService>();
             
             A.CallTo(() => cow.Say(null)).WithAnyArguments().Returns("Heey");
             A.CallTo(() => fortune.GetFortune()).Returns("AA");
+            A.CallTo(() => releaseDate.GetReleaseDate()).Returns(DateTime.UtcNow.AddHours(-1));
 
-            HomeController controller = new HomeController(cow, fortune, DateTime.UtcNow.AddHours(-1));
+            HomeController controller = new HomeController(cow, fortune, releaseDate);
 
             // Act
             ViewResult result = controller.Index() as ViewResult;
@@ -36,11 +38,13 @@ namespace Btk.CaaS.Tests.Controllers
         {
             var cow = A.Fake<Cow>();
             var fortune = A.Fake<IFortuneProvider>();
+            var releaseDate = A.Fake<IReleaseService>();
             
             A.CallTo(() => cow.Say(null)).WithAnyArguments().Returns("Heey");
             A.CallTo(() => fortune.GetFortune()).Returns("AA");
+            A.CallTo(() => releaseDate.GetReleaseDate()).Returns(DateTime.UtcNow.AddHours(1));
 
-            HomeController controller = new HomeController(cow, fortune, DateTime.UtcNow.AddHours(1));
+            HomeController controller = new HomeController(cow, fortune, releaseDate); 
 
             // Act
             RedirectToRouteResult result = controller.Index() as RedirectToRouteResult;
