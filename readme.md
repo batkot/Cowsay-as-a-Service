@@ -3,6 +3,11 @@ Cowsay-as-a-Service
 
 Description
 -----------
+.Net implementation of Tony Monroe's cowsay available -as-a-Service made for fun. 
+
+API
+---
+
 
 Technologies
 ------------

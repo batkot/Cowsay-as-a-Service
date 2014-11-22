@@ -1,4 +1,5 @@
-﻿@{
+﻿@model string
+@{
     ViewBag.Title = "Cowsay-as-a-Service";
 }
 
@@ -9,6 +10,7 @@
 
 <div class="cow-container">
     <pre id="cow">
+    @ViewBag.Cowsay
     </pre>
 </div>
 
@@ -17,6 +19,9 @@
         <h2>API</h2>
         <p>
             Simple API. Just send POST with Message as it's content and you'll get cowsay computed at our cloud.
+        </p>
+        <p>
+            POST Uri: ~/api/cowsay
         </p>
     </div>
 

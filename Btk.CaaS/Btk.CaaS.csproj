@@ -165,6 +165,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\Btk.pubxml" />
+    <None Include="Properties\PublishProfiles\smarter-asp-ftp.pubxml" />
+    <None Include="Properties\PublishProfiles\smarter-asp-web.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -180,7 +182,9 @@
     <Content Include="Scripts\TimeSpan-1.2.js" />
     <Content Include="Scripts\TimeSpan-1.2.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

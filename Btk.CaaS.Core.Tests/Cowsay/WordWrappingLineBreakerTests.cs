@@ -35,7 +35,7 @@ namespace Btk.CaaS.Core.Tests.Cowsay
         public void message_length_is_multiplicity_of_chars_in_row_should_break_properly()
         {
             var breaker = new WordWrappingLineBreaker(_charsInRow);
-            var message = string.Join(string.Empty, Enumerable.Range(0, 101).Select(x => x == 50 ? " " : "A"));
+            var message = string.Join(" ", new string('A',50), new string('A', 50));
 
             var result = breaker.Break(message);
             Assert.Equal(2, result.Count());

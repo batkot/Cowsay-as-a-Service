@@ -9,11 +9,11 @@ namespace Btk.CaaS
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js").Include(
+                        "~/Scripts/jquery-{version}.js",
                         "~/Scripts/jquery.unobtrusive-ajax.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/countdown").Include(
-                        "~/Scripts/TimeSpan-{version}.js").Include(
+                        "~/Scripts/TimeSpan-{version}.js",
                         "~/Scripts/countdown.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/cow").Include(
@@ -28,7 +28,7 @@ namespace Btk.CaaS
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css").Include(
+                      "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/css/countdown").Include(

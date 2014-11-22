@@ -41,6 +41,9 @@
     <Reference Include="ApprovalUtilities">
       <HintPath>..\packages\ApprovalUtilities.3.0.7\lib\net35\ApprovalUtilities.dll</HintPath>
     </Reference>
+    <Reference Include="FakeItEasy">
+      <HintPath>..\packages\FakeItEasy.1.25.0\lib\net40\FakeItEasy.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -102,6 +105,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Btk.CaaS.Core\Btk.CaaS.Core.csproj">
+      <Project>{1b1a3afb-bff9-4a2f-a2ed-82d20733260f}</Project>
+      <Name>Btk.CaaS.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Btk.CaaS\Btk.CaaS.csproj">
       <Project>{7E8B94EA-9B58-453B-AC92-289E6870C9CC}</Project>
       <Name>Btk.CaaS</Name>

@@ -1,11 +1,10 @@
-﻿
-setInterval(
+﻿setInterval(
     function () {
         getCow(function (cow) {
             display(cow)
         }
         )
-    }, 10000);
+    }, 20000);
 
 function getCow(display)
 {
