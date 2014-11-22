@@ -14,7 +14,7 @@ namespace Btk.CaaS.Tests.Controllers
     public class HomeControllerTest
     {
         [Fact]
-        public void Index()
+        public void index_after_release_date_should_return_site()
         {
             var cow = A.Fake<Cow>();
             var fortune = A.Fake<IFortuneProvider>();
@@ -22,11 +22,28 @@ namespace Btk.CaaS.Tests.Controllers
             A.CallTo(() => cow.Say(null)).WithAnyArguments().Returns("Heey");
             A.CallTo(() => fortune.GetFortune()).Returns("AA");
 
-            // Arrange
-            HomeController controller = new HomeController(cow,fortune);
+            HomeController controller = new HomeController(cow, fortune, DateTime.UtcNow.AddHours(-1));
 
             // Act
             ViewResult result = controller.Index() as ViewResult;
+
+            // Assert
+            Assert.NotNull(result);
+        }
+
+        [Fact]
+        public void Index_before_release_date_should_redirect()
+        {
+            var cow = A.Fake<Cow>();
+            var fortune = A.Fake<IFortuneProvider>();
+            
+            A.CallTo(() => cow.Say(null)).WithAnyArguments().Returns("Heey");
+            A.CallTo(() => fortune.GetFortune()).Returns("AA");
+
+            HomeController controller = new HomeController(cow, fortune, DateTime.UtcNow.AddHours(1));
+
+            // Act
+            RedirectToRouteResult result = controller.Index() as RedirectToRouteResult;
 
             // Assert
             Assert.NotNull(result);

@@ -14,10 +14,15 @@ namespace Btk.CaaS.Controllers
         private DateTime _releaseDate = new DateTime(2014, 11, 22, 23, 0, 0);
         private Cow _cow;
         private IFortuneProvider _fortuneProvider;
-        public HomeController(Cow cow, IFortuneProvider fortuneProvider)
+        public HomeController(Cow cow, IFortuneProvider fortuneProvider, DateTime? releaseDate = null)
         {
             _cow = cow;
             _fortuneProvider = fortuneProvider;
+
+            if (releaseDate.HasValue)
+            {
+                _releaseDate = releaseDate.Value;
+            }
         }
 
         public ActionResult Index()
