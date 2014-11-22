@@ -7,6 +7,11 @@ Description
 
 API
 ---
+To make cow say something funny just send HTTP POST to `~/api/cowsay` with your message as content. If you don't provide message, cow will say a quote got from alpha.mike-r.com [QOTD](http://en.wikipedia.org/wiki/QOTD) server.
+
+The QOTD is also available as-a-Service. Just GET it from `~/api/fortune/get`
+
+Service is currently available at [appharbor](http://caas.apphb.com)
 
 
 Technologies
