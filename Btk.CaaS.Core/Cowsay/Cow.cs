@@ -16,7 +16,7 @@ namespace Btk.CaaS.Core.Cowsay
             _avatarDrawer = avatarDrawer;
         }
 
-        public string Say(string message)
+        public virtual string Say(string message)
         {
             var builder = new StringBuilder();
 
